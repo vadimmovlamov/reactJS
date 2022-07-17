@@ -1,0 +1,57 @@
+.wrapper{
+    max-width: 50vw;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.screen{
+    max-width: 60%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto 25px;
+    font-size: 25px;
+}
+
+.screenDouble{
+    max-width: 60%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto 25px;
+    font-size: 25px;
+    background-color: #c2aeae;
+}
+
+.buttonsArea{
+    margin: 0 auto;
+    width: max-content;
+}
+
+.controlButton{
+    border-radius: 50%;
+    border: 1px solid #502f2c;
+    background: rgb(107, 109, 107);
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &:hover{
+        background: rgb(64, 165, 104);
+    }
+}
+
+.bagroundRed{
+    background: red;
+}
