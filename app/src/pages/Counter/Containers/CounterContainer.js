@@ -1,73 +1,64 @@
-import React, {
-    Component
-} from 'react'
+import React, { PureComponent } from 'react'
 
-import Counter from "../components/Counter";
+import Counter from "../../../components/Counter";
 
-class CounterContainer extends Component {
-    constructor(props) { // для чего мы создаем конструктор
+class CounterContainer extends PureComponent {
+    constructor(props) {
+        // Вызов конструктора
+        // Родительский класс React.Component
         super(props)
-    
+        
+        // процесс инициализации
         this.state = {
-        countValue: 0,
-        countEven: true,
+            countValue: 0,
+            countEven: true
         }
     }
 
     isEven = (number) => (number % 2 === 0)
 
     handleIncrement = () => {
-        this.setState(            // можно не применять this.state а воспользоваться функцией
-            (prevState) => {
-                const result = prevState.countValue  + 1;
+        this.setState( 
+            (state) => {
+                const incrementValue = state.countValue + 1;
                 return {
-                    countValue: result, 
-                    isEven: this.isEven(result)
+                    countValue: incrementValue,
+                    countEven: this.isEven(incrementValue)
                 }
             }
         )
     }
 
     handleDecrement = () => {
-        this.setState(            // можно не применять this.state а воспользоваться функцией
-            (prevState) => {
-                const result = prevState.countValue > 0 ? prevState.countValue - 1 : 0;
-                return {
-                    countValue: result, 
-                    isEven: this.isEven(result)
+        if (this.state.countValue > 0) {
+            this.setState((state) => {
+                const nextCount = state.countValue - 1
+                return{
+                    countValue: nextCount,
+                    countEven: this.isEven(nextCount)
                 }
-            }
-        )
-// как сделать , если я кликаю более 10 раз по кнопке, то выскакивает сообщение - Да задолбал ты! Ща покажу ответ
+            })
+        }
     }
 
     handleReset = () => {
         this.setState({
-            countValue: 0,
+            countValue: 0, countEven: true
         })
     }
 
     render() {
-
-/*         let SomeComponent = () => {
-            return <div>component</div>
-        }
-
-        let SomeComponent = ({ data }) => {
-            return <div>{ data }</div>
-        } // почему мы тут в фигурные скобки записываем { data }
- */
-
-
-        return <Counter 
-        countValue={this.state.countValue}
-        onIncrement={this.handleIncrement}
-        onDecrement={this.handleDecrement}
-        onReset={this.handleReset}
-        countEven={this.state.isEven}
-        />
-
-        
+        return (
+            <>
+                <Counter
+                    countValue = {this.state.countValue}
+                    onIncrement = {this.handleIncrement}
+                    onDecrement = {this.handleDecrement}
+                    onReset = {this.handleReset}
+                    countEven = {this.state.countEven}
+                />
+            </>
+        )
     }
 }
 
