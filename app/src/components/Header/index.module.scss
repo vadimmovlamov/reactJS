@@ -1,0 +1,14 @@
+.menuItem{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    display: inline-block;
+
+
+    &:last-child{
+        margin-right: 0;
+    }
+}

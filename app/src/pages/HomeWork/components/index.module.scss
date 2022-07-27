@@ -1,0 +1,41 @@
+.wrapperCount{
+    max-width: 25vw;
+    margin-left: 100px;
+    padding: 25px;
+    border: 4mm ridge rgba(211, 220, 50, .6);
+    border-radius: 20px;
+}
+
+.buttonsArea{
+    margin: 0 auto;
+    width: max-content;
+}
+
+.bagroundEven{
+    background: rgb(243, 85, 85);
+}
+
+.bagroundOdd{
+    background: rgb(198, 202, 146);
+}
+
+.mainButtons{
+    background: rgb(209, 196, 17);
+    max-width: 100%;
+    height: 50px;
+    font-size: 25px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+    &:hover{
+        background: rgb(132, 207, 236);
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+}
+
+    
