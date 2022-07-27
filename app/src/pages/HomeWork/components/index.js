@@ -12,7 +12,7 @@ const Task = ({
   handleReset,
   totalSum,
 }) => {
-  
+
   return(
     <div className={styles.wrapperCount}>
       
@@ -22,8 +22,8 @@ const Task = ({
       </div>
       
       <h2>
-        <p>Количество счётчиков на экране: {count.length}</p>
-        <p>Сумма значений всех счётчиков: {totalSum}</p>
+        <p>Количество счётчиков на экране : {count.length}</p>
+        <p>Сумма значений всех счётчиков : {totalSum}</p>
       </h2>
 
       <div>  {/* зона где будут рисоваться наши счетчики */}
