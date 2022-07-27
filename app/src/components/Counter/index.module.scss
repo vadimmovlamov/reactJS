@@ -3,10 +3,11 @@
     padding: 25px;
     border: 2px solid black;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .screen{
-    max-width: 60%;
+    max-width: 80%;
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px;
@@ -62,8 +63,21 @@
 
 .wrapperCount{
     max-width: 25vw;
-    margin-left: 100px;
     padding: 25px;
     border: 2px solid black;
     border-radius: 20px;
+}
+
+.deleteButton{
+    border-radius: 40%;
+    border: 1px solid #502f2c;
+    background: rgb(223, 83, 64);
+    font-size: 25px;
+    transition: 0.3s;
+    color: white;
+    margin-bottom: 10px;
+
+    &:hover{
+        background: rgb(64, 165, 104);
+    }
 }

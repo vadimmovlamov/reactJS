@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { ROUTE_NAMES } from "../../router/routeNames";
 
-const Counter = ({ countValue, countEven, onIncrement, onDecrement, onReset }) => {
+const Counter = ({ id, countValue, countEven, onIncrement, onDecrement, onReset, onDelete }) => {
   countEven = countValue % 2 === 0
   return (
 
     <div className={styles.wrapper} >
       
-      <button><Link to={ROUTE_NAMES.HOME}>HOME</Link></button>
+      <button onClick={() => onDelete(id)} className={styles.deleteButton}>Delete</button>
 
       <div className={styles.wrapperCount}>
         <div className={`${styles.screen} ${countEven ? styles.bagroundEven : styles.bagroundOdd}`}>
@@ -23,9 +23,9 @@ const Counter = ({ countValue, countEven, onIncrement, onDecrement, onReset }) =
         )}
         
         <div className={styles.buttonsArea}>
-          <button onClick={onIncrement} className={styles.controlButton}>+</button>
-          <button onClick={onReset} className={styles.controlButton}>🗘</button>
-          <button onClick={onDecrement} className={styles.controlButton}>-</button>
+          <button onClick={() => onIncrement(id)} className={styles.controlButton}>+</button>
+          <button onClick={() => onReset(id)} className={styles.controlButton}>🗘</button>
+          <button onClick={() => onDecrement(id)} className={styles.controlButton}>-</button>
         </div>
       </div>
     </div>

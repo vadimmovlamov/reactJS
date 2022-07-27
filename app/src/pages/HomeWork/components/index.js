@@ -1,45 +1,56 @@
-import React from 'react';
-import styles from './index.module.scss'
-import PropTypes from 'prop-types';
+import styles from "../components/index.module.scss"
+import PropTypes from "prop-types";
+import Counter from "../../../components/Counter";
 
-const Task = ({ countValue,  onIncrement, onDecrement, onReset, addCounter, resetCounter }) => {
+const Task = ({ 
+  count, 
+  addCounter, 
+  resetCount,
+  handleIncrement,
+  handleDecrement,
+  handleDelete,
+  handleReset,
+  totalSum,
+}) => {
+  
   return(
-    <div className={styles.wrapper}>
-
-      <div>
+    <div className={styles.wrapperCount}>
+      
+      <div className={styles.buttonsArea}>
         <button onClick={addCounter} className={styles.mainButtons}>Add Counter</button>
-        <button onClick={resetCounter} className={styles.mainButtons}>Reset</button>
+        <button onClick={resetCount} className={styles.mainButtons}>Reset Counter</button> 
       </div>
       
-      <div className={styles.wrapperCount}>
-        <div className={`${styles.screen} ${countValue % 2 === 0 ? styles.bagroundEven : styles.bagroundOdd}`}>
-          {countValue}
-        </div>
-      
+      <h2>
+        <p>Количество счётчиков на экране: {count.length}</p>
+        <p>Сумма значений всех счётчиков: {totalSum}</p>
+      </h2>
+
+      <div>  {/* зона где будут рисоваться наши счетчики */}
         {
-          countValue > 0 && (
-            <div className={styles.screen}>
-              {countValue % 2 === 0 ? 'Введено четное число' : 'Введено нечетное число'}
-            </div>
-          )
+          count.map(({ id, countValue }) => (
+            <Counter 
+              id = {id}
+              key = {id}  /* у каждого элемента в списке должен быть уникальный ключ */
+              countValue = {countValue} 
+              onIncrement = {handleIncrement}
+              onDecrement = {handleDecrement}
+              onDelete = {handleDelete}
+              handleReset = {handleReset}
+            />
+          ))
         }
-      
-        <div className={styles.buttonsArea}>
-          <button onClick={onIncrement} className={styles.controlButton}>+</button>
-          <button onClick={onReset} className={styles.controlButton}>🗘</button>
-          <button onClick={onDecrement} className={styles.controlButton}>-</button>
-        </div>
       </div>
-      
-    </div>  
+    </div>
   )
 }
+
 Task.propTypes = {
-  countValue: PropTypes.number.isRequired,
-  onIncrement: PropTypes.func.isRequired,
-  onDecrement: PropTypes.func.isRequired,
-  onReset: PropTypes.func.isRequired,
-  countEven: PropTypes.func.isRequired
+  count: PropTypes.arrayOf(
+    PropTypes.shape({id: PropTypes.string, countValue: PropTypes.number}) // shape - почему приписываем?
+  ).isRequired,
 }
 
 export default Task;
+
+// тут прописываю то , что будет отображено на экране
