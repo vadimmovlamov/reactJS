@@ -36,7 +36,7 @@ const Task = ({
               onIncrement = {handleIncrement}
               onDecrement = {handleDecrement}
               onDelete = {handleDelete}
-              handleReset = {handleReset}
+              onReset = {handleReset}
             />
           ))
         }

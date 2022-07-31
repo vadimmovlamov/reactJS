@@ -3,7 +3,9 @@ export const ROUTE_NAMES = {
     COUNTER: '/counter',
     FUNCTIONAL_COUNTER: '/fn-counter',
     LISTS: '/lists',
-    TASK: '/homework'
+    TASK: '/homework',
+    REDUX_COUNTERS: '/redux-counters',
+    TODO_LIST: '/todo-list',
 }
 
 
