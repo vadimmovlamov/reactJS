@@ -3,14 +3,14 @@ import { v4 as uuid } from 'uuid';
 
 import Task from '../components'; //импортируем Task т.к. передаем наши методы для отрисовки в task
 
-const TaskCounterContainer = (defaultValue) => { 
+const TaskCounterContainer = () => { 
     const [count, setCount] = useState([]); 
 // должны запушить объект в массив useState([]) c одним единственным полем countValue
 
     const addCounter = () => {
         const newCounter = {  //создаем новый счетчик по id
             id: uuid(),
-            countValue: 0, // почему 0?
+            countValue: 0, 
         }
         //setCount([...count, newCounter]) // передаем все скопированные счетчики count, и добавляем новые
         
@@ -25,13 +25,13 @@ const TaskCounterContainer = (defaultValue) => {
         })
     }
 
-    const resetCount = useCallback((id) => {
-        setCount()
+    const resetCount = useCallback(() => {
+        setCount([])
     }, [])
 
     const handleIncrement = useCallback((id) => {
         setCount((state) => {
-            const countCopy = [...state]  // делаем сначала копию.... а зачем?
+            const countCopy = [...state]  // делаем сначала копию
             const findElement = countCopy.find( // находим в копии countCopy элемент по которому кликнули
                 (counter) => counter.id === id
             )
@@ -67,8 +67,15 @@ const TaskCounterContainer = (defaultValue) => {
         })
     }, [])
 
-    const handleReset = useCallback( () => {
-        setCount(defaultValue)
+    const handleReset = useCallback( (id) => {
+        setCount((state) => {
+            const countCopy = [...state]
+            const findElement = countCopy.find(
+                (counter) => counter.id === id
+            )
+            findElement.countValue = 0
+            return countCopy
+        })
     }, [])
 
     const totalSum = count.reduce( ( sum, {countValue} ) => { // {countValue} - деструктуризация массива по объекту, т.к. есть массив счетчиков
