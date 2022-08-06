@@ -1,47 +1,76 @@
+import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
-import TodoList from "../components";
-import { CREATE_FORM, DELETE_FORM, EDIT_FORM } from "../actions";
+import { useForm } from "../../../hooks/useForm";
+import { COMPLETE_FORM, CREATE_FORM, DELETE_FORM, EDIT_FORM, TOGGLE_FORM } from "../actions";
+import { todosSelector } from "../selectors";
+import TodoReadMode from "../components/TodoReadMode";
+import TodoEditMode from "../components/TodoEditMode/Index";
 
 const TodoListContainer = () => {
     const dispatch = useDispatch();
+    const todos = useSelector(todosSelector);
 
-    const forms = useSelector((state) => state.formManager.forms);
+    const [form, handleFormChange, handleFormReset] = useForm({todoText:''}) //handleFormReset - очищение формы при submite
 
-    const handleListCreate = () => {
-        dispatch(CREATE_FORM())
-    }
+    const handleTodoCreate = useCallback((event) => {
+        event.preventDefault(); //прописано для того что бы наша форма и страница не перезагружались. сообщает User agent, что если событие не обрабатывается явно, его действие по умолчанию не должно выполняться так, как обычно
 
-    const handleListEdit = (id) => {
-        dispatch(EDIT_FORM(id))
-    } 
+        const trimmedValue = form.todoText.trim();
+        if (trimmedValue.length > 3) {
+            dispatch(CREATE_FORM(form.todoText))
+        }
+        handleFormReset(); // очистит поле формы
 
-    const handleListDelete = (id) => {
+    }, [form.todoText])
+
+
+    const handleTodoModeToggle = useCallback((id) => {
+        dispatch(TOGGLE_FORM(id))
+    }, [])
+
+    const handleSave = useCallback(({id, updateText}) => {
+        if (updateText.trim().length > 3) {
+            dispatch(EDIT_FORM({id, updateText}))
+        }
+    }, [])
+
+    const handleComplete = useCallback((id) => {
+        dispatch(COMPLETE_FORM(id))
+    }, [])
+
+    const handleDelete = useCallback((id) => {
         dispatch(DELETE_FORM(id))
-    } 
+    }, [])
 
     return (
         <>
-            <div>
-                {forms.map(({ item }) => (
-                    <div key={item.id}>
-                        <div>{ item.title }</div>
-                        <button onClick={ () => handleListEdit(item.id) }>Edit</button>
-                        <button onClick={ () => handleListDelete(item.id) }>Delete</button>
-                    </div>
+            <form onSubmit={handleTodoCreate}>
+                <input value={form.todoText} onChange={handleFormChange} name="todoText" />
 
-                    <TodoList
-                        todoValue={value}
-                        onCreate={handleListCreate}
-                        onEdit={handleListEdit}
-                        onDelete={handleListDelete}
-                        key={id}
-                        id={id}
-                    />
+                <button role='submit'>Create Todo</button>
+            </form>
+
+            <ol>
+                {todos.map((todo) => (
+                    <li key={todo.id}>
+                        { todo.isEditMode ? (<TodoEditMode id={todo.id} text={todo.text} handleDiscard={handleTodoModeToggle} handleSave={handleSave} />) : (
+                            <TodoReadMode 
+                                id={todo.id}  
+                                text={todo.text} 
+                                handleEdit={handleTodoModeToggle} 
+                                isCompleted={todo.isCompleted}
+                                handleComplete={handleComplete}
+                                handleDelete={handleDelete}
+                            />)
+                        }
+                    </li>
                 ))}
-            </div>
+            </ol>
         </>
     )
 }
 
 export default TodoListContainer;
+
+//вызываем action и преедаем id, updateText, todoText. Описываем бизнес-логику компонента
+//preventDefault() - что бы запретить по умолчанию презагрузку страниц после каждого действия 
