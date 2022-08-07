@@ -7,6 +7,12 @@ import ListsContainer from "../pages/Lists/containers/ListsContainer";
 import TaskCounterContainer from "../pages/HomeWork/containers/TaskCounterContainer";
 import ReduxCounterContainer from "../pages/ReduxCounters/container/ReduxCounterContainer";
 import TodoListContainer from "../pages/TodoList/container/TodoListContainer";
+import DataFetchingContainer from "../pages/DataFetching/containers/DataFetchingContainer";
+import DataFetchingContainerTwo from "../pages/DataFetchingTwo/containers/DataFetchingContainerTwo";
+import SearchRequest from "../pages/SearchREquest/containers/SearchRequestContainers";
+import TodoListContainerSearch from "../pages/TodoListSearch/container/TodoListContainerSearch";
+
+
 
 
 const Router = () => {
@@ -19,6 +25,10 @@ const Router = () => {
             <Route path={ROUTE_NAMES.TASK} element ={<TaskCounterContainer />} />
             <Route path={ROUTE_NAMES.REDUX_COUNTERS} element ={<ReduxCounterContainer />} />
             <Route path={ROUTE_NAMES.TODO_LIST} element ={<TodoListContainer />} />
+            <Route path={ROUTE_NAMES.DATA_FETCH} element ={<DataFetchingContainer />} />
+            <Route path={ROUTE_NAMES.DATA_FETCH_TWO} element ={<DataFetchingContainerTwo />} />
+            <Route path={ROUTE_NAMES.SEARCH_REQUEST} element ={<SearchRequest />} />
+            <Route path={ROUTE_NAMES.TODO_LIST_SEARCH} element ={<TodoListContainerSearch />} />
         </Routes>
     )
 }
