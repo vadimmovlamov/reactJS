@@ -21,7 +21,7 @@ const SearchRequest = () => {
     }, [])
 
     return <div className={styles.wrapper}>
-        <h2>Search Pokemon for fight :)</h2>
+        <h2>Search Pokemon for fight :</h2>
         <FreeSolo 
             pokemons = {pokemons}
             
