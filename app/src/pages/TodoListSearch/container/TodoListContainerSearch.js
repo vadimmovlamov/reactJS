@@ -30,7 +30,6 @@ const TodoListContainerSearch = () => {
 
     }, [form.todoText])
 
-
     const handleTodoModeToggle = useCallback((id) => {
         dispatch(toggleTodo(id))
     }, [])

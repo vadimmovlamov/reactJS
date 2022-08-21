@@ -1,3 +1,6 @@
+// в <Routes> мы будем складывать все новые страницы, которые мы будем создавать
+//<Route path={ROUTE_NAMES.HOME} element ={<button><Link to={ROUTE_NAMES.COUNTER}>Counter</Link></button>} />
+
 import { Routes, Route } from "react-router-dom";
 import { ROUTE_NAMES } from "./routeNames";
 import Home from "../pages/Home";
@@ -36,5 +39,3 @@ const Router = () => {
 export default Router;
 
 
-// в <Routes> мы будем складывать все новые страницы, которые мы будем создавать
-//<Route path={ROUTE_NAMES.HOME} element ={<button><Link to={ROUTE_NAMES.COUNTER}>Counter</Link></button>} />

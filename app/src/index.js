@@ -31,3 +31,8 @@ root.render(
         </Provider>
     </BrowserRouter>
 );
+
+// BrowserRouter - обертка для всех страниц приложения
+// Provider - 
+// MainLayout - что бы header был всегда на виду на всех открываемых страницах
+// Router - получает все адреса страниц которые есть
