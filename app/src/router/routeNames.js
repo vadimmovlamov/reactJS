@@ -11,6 +11,7 @@ export const ROUTE_NAMES = {
     DATA_FETCH_TWO: '/data-fetch-two-variant',
     SEARCH_REQUEST: '/search-request',
     TODO_LIST_SEARCH: '/todo-list-search',
+    DATA_FETCH_TOOLKIT: '/data-fetch-redux-toolkit',
 }
 
 

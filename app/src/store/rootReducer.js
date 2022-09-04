@@ -7,6 +7,7 @@ export const rootReducer = combineReducers({
     countersManager: countersManagerReducer,
     // todoList: todoReducer,
     todoList: todoListSlice,
+    
 });
 
 

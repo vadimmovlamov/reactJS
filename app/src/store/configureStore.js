@@ -1,12 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import todoList from '../pages/TodoListSearch/reducers';
 // import { rootReducer } from './rootReducer';
+import pokemonsSlice from '../pages/DataFetchingReduxToolkit/reducers';
+import { countersManagerReducer } from '../pages/ReduxCounters/reducers';
 
 
 export const store = configureStore({
   reducer: {
     todoList,
   },
+  pokemons: pokemonsSlice,
+  countersManager: countersManagerReducer,
 })
 
 

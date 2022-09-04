@@ -15,6 +15,7 @@ import DataFetchingContainer from "../pages/DataFetching/containers/DataFetching
 import DataFetchingContainerTwo from "../pages/DataFetchingTwo/containers/DataFetchingContainerTwo";
 import SearchRequest from "../pages/SearchREquest/containers/SearchRequestContainers";
 import TodoListContainerSearch from "../pages/TodoListSearch/container/TodoListContainerSearch";
+import DataFetchingContainerToolkit from "../pages/DataFetchingReduxToolkit/containers/DataFetchingContainer";
 
 
 
@@ -33,6 +34,7 @@ const Router = () => {
             <Route path={ROUTE_NAMES.DATA_FETCH_TWO} element ={<DataFetchingContainerTwo />} />
             <Route path={ROUTE_NAMES.SEARCH_REQUEST} element ={<SearchRequest />} />
             <Route path={ROUTE_NAMES.TODO_LIST_SEARCH} element ={<TodoListContainerSearch />} />
+            <Route path={ROUTE_NAMES.DATA_FETCH_TOOLKIT} element ={<DataFetchingContainerToolkit />} />
         </Routes>
     )
 }
