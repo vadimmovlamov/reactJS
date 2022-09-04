@@ -5,8 +5,8 @@ import { ROUTE_NAMES } from "../../router/routeNames";
 
 const Counter = ({ id, countValue, countEven, onIncrement, onDecrement, onReset, onDelete }) => {
   countEven = countValue % 2 === 0
-  return (
 
+  return (
     <div className={styles.wrapper} >
       
       <button onClick={() => onDelete(id)} className={styles.deleteButton}>Delete</button>

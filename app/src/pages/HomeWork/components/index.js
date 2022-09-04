@@ -1,6 +1,7 @@
-import styles from "../components/index.module.scss"
 import PropTypes from "prop-types";
 import Counter from "../../../components/Counter";
+
+import styles from "../components/index.module.scss"
 
 const Task = ({ 
   count, 
@@ -47,7 +48,10 @@ const Task = ({
 
 Task.propTypes = {
   count: PropTypes.arrayOf(
-    PropTypes.shape({id: PropTypes.string, countValue: PropTypes.number}) // shape - почему приписываем?
+    PropTypes.shape({id: PropTypes.string, countValue: PropTypes.number}) 
+    // shape - почему приписываем? - Если же мы хотим провалидировать массив юзеров, то можно записать это так. Этим мы ожидаем, что у нас будет массив обьектов с правильными данными.
+    // Ограничение, что свойство должно быть объектом определенной формы
+    // (указываются имена свойств объекта и их типы).
   ).isRequired,
 }
 

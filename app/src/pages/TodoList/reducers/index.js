@@ -12,8 +12,8 @@ export const todoReducer = handleActions({
         const todoItem = {
             id: uuid(),
             text: todoText,
-            isCompleted: false, // почему false?
-            isEditMode: false, // почему false?
+            isCompleted: false, 
+            isEditMode: false, 
         }
         todoCopy.unshift(todoItem)
         return {

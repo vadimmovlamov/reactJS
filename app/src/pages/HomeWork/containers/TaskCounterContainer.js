@@ -57,13 +57,19 @@ const TaskCounterContainer = () => {
     const handleDelete = useCallback((id) => {
         setCount((state) => {
             const countCopy = [...state]
-            const deleteElement = countCopy.findIndex( // потому что удаляем по индексу
+            const deleteElement = countCopy.findIndex( // findIndex потому что удаляем по индексу
                 (counter) => counter.id === id
             )
 
             countCopy.splice(deleteElement, 1)
-
-            return countCopy // возвращаем обновленную копию
+            
+            // возвращаем обновленную копию
+            return countCopy.map(({id, countValue}) => {
+                return{
+                    id,
+                    countValue: countValue % 2 !== 0 ? countValue - 1 : countValue
+                }
+            })
         })
     }, [])
 
@@ -81,7 +87,6 @@ const TaskCounterContainer = () => {
     const totalSum = count.reduce( ( sum, {countValue} ) => { // {countValue} - деструктуризация массива по объекту, т.к. есть массив счетчиков
             return sum + countValue
         }, 0)
-    
 
     return(
         <Task 
