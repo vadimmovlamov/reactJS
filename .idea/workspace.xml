@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87309780-7752-419c-88f3-c960d93bf565" name="Changes" comment="">
+    <list default="true" id="a5b01ec4-d83e-45ee-8905-89da373ba026" name="Changes" comment="add pages">
+      <change afterPath="$PROJECT_DIR$/app/src/pages/PokemonsDetails/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/pages/PokemonsDetails/containers/PokemonsDetailsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/pages/PokemonsDetails/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/SearchREquest/containers/SearchRequestContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/SearchREquest/containers/SearchRequestContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/TodoListSearch/container/TodoListContainerSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/TodoListSearch/container/TodoListContainerSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/TodoListSearch/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/TodoListSearch/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/api/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/api/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/PokemonsCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/PokemonsCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/DataFetchingReduxToolkit/Api/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/DataFetchingReduxToolkit/Api/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/DataFetchingReduxToolkit/containers/DataFetchingContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/DataFetchingReduxToolkit/containers/DataFetchingContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/DataFetchingReduxToolkit/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/DataFetchingReduxToolkit/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/router/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/router/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/router/routeNames.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/router/routeNames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/store/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/store/configureStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/store/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/store/rootReducer.js" afterDir="false" />
     </list>
@@ -16,13 +23,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/src/pages/PokemonsDetails/reducers/index.js" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2DPRD1jvNkDkZXomAJ5hPxjp2PO" />
+  <component name="ProjectId" id="2EZSAeCSHAH1QcrgvKfwXxU4cfr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,24 +52,53 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Vadik/GitHub/reactJS",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editing.templates",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="87309780-7752-419c-88f3-c960d93bf565" name="Changes" comment="" />
-      <created>1660598609460</created>
+      <changelist id="a5b01ec4-d83e-45ee-8905-89da373ba026" name="Changes" comment="" />
+      <created>1662801473644</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1660598609460</updated>
-      <workItem from="1660598610847" duration="38000" />
+      <updated>1662801473644</updated>
+      <workItem from="1662801476360" duration="228000" />
+      <workItem from="1662801714580" duration="25000" />
+      <workItem from="1662801747757" duration="308000" />
+      <workItem from="1662802068119" duration="108000" />
+      <workItem from="1662802184757" duration="1187000" />
+      <workItem from="1662918603290" duration="7458000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pages" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,19 +1,17 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { api } from '../../../api/config'
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getPokemons} from "../../DataFetchingTwo/api";
+
 
 const initialState = {
     isLoading: false,
-    pokemons: [],
+    data: [],
     error: null,
 }
 
 export const loadPokemons = createAsyncThunk(
     'pokemons/fetchAll',
-    async(someArg) => {
-        console.log(someArg);
-        const response = await api.get('/pokemons');
-
-        return response.pokemons;
+    async() => {
+        return getPokemons;
     }
 )
 
@@ -24,16 +22,16 @@ const pokemonsSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(loadPokemons.pending, (state) => {
             state.isLoading = true;
-        })
+        });
         builder.addCase(loadPokemons.fulfilled, (state, {payload}) => {
             state.isLoading = false;
-            state.pokemons = payload;
-        })
+            state.data = payload;
+        });
         builder.addCase(loadPokemons.rejected, (state, {payload}) => {
             state.isLoading = false;
             state.error = payload;
-        })
-    }
+        });
+    },
 })
 
 export default pokemonsSlice.reducer;

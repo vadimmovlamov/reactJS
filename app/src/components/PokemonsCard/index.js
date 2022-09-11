@@ -1,7 +1,7 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-const PokemonCard = (name, image, experience) => (
-    <Card sx={{ maxWidth: 345 }}>
+const PokemonCard = (name, image, experience, handleClick) => (
+    <Card sx={{ maxWidth: 345 }} onClick={handleClick}>
         <CardMedia
             component="img"
             height="140"

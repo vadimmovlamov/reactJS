@@ -12,6 +12,7 @@ export const ROUTE_NAMES = {
     SEARCH_REQUEST: '/search-request',
     TODO_LIST_SEARCH: '/todo-list-search',
     DATA_FETCH_TOOLKIT: '/data-fetch-redux-toolkit',
+    DATA_POKEMONS: '/pokemons/:id',
 }
 
 

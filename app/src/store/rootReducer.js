@@ -1,13 +1,12 @@
 import { combineReducers } from "redux";
 import { countersManagerReducer } from "../pages/ReduxCounters/reducers";
-import { todoListSlice } from "../pages/TodoListSearch/reducers";
+import todoListSlice from "../pages/TodoListSearch/reducers";
 // import { todoReducer } from "../pages/TodoList/reducers";
+import pokemonsSlice from '../pages/DataFetchingReduxToolkit/reducers';
 
 export const rootReducer = combineReducers({
-    countersManager: countersManagerReducer,
     // todoList: todoReducer,
     todoList: todoListSlice,
-    
 });
 
 

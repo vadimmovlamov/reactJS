@@ -8,4 +8,4 @@ const apiConfig = {
 
 export const api = axios.create(apiConfig)
 
-// можно ли передавать сюда много BASE_URL? и как ?
+// можно ли передавать сюда много BASE_URL? и как ? - Ответ НЕТ
