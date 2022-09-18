@@ -11,8 +11,10 @@ export const ROUTE_NAMES = {
     DATA_FETCH_TWO: '/data-fetch-two-variant',
     SEARCH_REQUEST: '/search-request',
     TODO_LIST_SEARCH: '/todo-list-search',
-    DATA_FETCH_TOOLKIT: '/data-fetch-redux-toolkit',
-    DATA_POKEMONS: '/pokemons/:id',
+    DATA_FETCH_TOOLKIT: '/data-fetch-redux-toolkit', // это у адриана POKEMONS
+    DETAILS_POKE: '/data-fetch-redux-toolkit/:id', // это у адриана POKEMON_DETAILS
+    SIGN_UP: '/sign-up',
+    SIGN_IN: '/sign-in',
 }
 
 

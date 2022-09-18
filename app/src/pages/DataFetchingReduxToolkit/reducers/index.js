@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getPokemons} from "../../DataFetchingTwo/api";
+import {getPokemons} from "../api/config";
 
 
 const initialState = {
@@ -9,14 +9,15 @@ const initialState = {
 }
 
 export const loadPokemons = createAsyncThunk(
-    'pokemons/fetchAll',
+    "pokemons/fetchAll",
+
     async() => {
-        return getPokemons;
+        return getPokemons();
     }
-)
+);
 
 const pokemonsSlice = createSlice({
-    name: 'pokemons',
+    name: "pokemons",
     reducers: {},
     initialState,
     extraReducers: (builder) => {

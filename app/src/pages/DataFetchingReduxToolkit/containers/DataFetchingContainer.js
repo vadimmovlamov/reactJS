@@ -1,16 +1,16 @@
-
-import { useEffect } from 'react';
+import PokemonCard from "../../../components/PokemonsCard";
 import { useDispatch, useSelector } from 'react-redux';
-import {loadPokemons} from "../reducers";
-import PokemonsCard from "../../../components/PokemonsCard";
+import { useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
+import {loadPokemons} from "../reducers";
 import {ROUTE_NAMES} from "../../../router/routeNames";
 
 
 const DataFetchingContainerToolkit = () => {
     const dispatch = useDispatch();
-    // const {data, isLoading, error} = useFetching(getPokemons, [])
+
     const  navigate = useNavigate();
+
     const { data } = useSelector((state) => state.pokemons)
 
     // useEffect с помощью async await
@@ -19,16 +19,16 @@ const DataFetchingContainerToolkit = () => {
     }, []);
 
     const  handleNavigateToPokemonDetail = (pokemonId) => {
-    navigate(`${ROUTE_NAMES.DATA_FETCH_TOOLKIT}/${pokemonId}`)
+        navigate(`${ROUTE_NAMES.DATA_FETCH_TOOLKIT}/${pokemonId}`);
     }
 
     return(
         <div>
-            <h1>Something page</h1>
+            <h1>Something page - DATA_FETCH_TOOLKIT </h1>
 
             <div>
                 {data.map((pokemon) => (
-                    <PokemonsCard
+                    <PokemonCard
                         key={pokemon.id}
                         name={pokemon.name}
                         image={pokemon.image}
