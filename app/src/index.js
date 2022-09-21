@@ -1,19 +1,40 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {BrowserRouter} from 'react-router-dom';
 
 import Router from "./router/Routes";
 
-import './index.css';
 import MainLayout from './components/Layouts';
+import './index.css';
+import {store} from './store/configureStore';
+import Registration from "./components/SignUp";
+import "../src/components/SignUp/Styles";
+
+/* 
+после появляения в коде redux toolkit ужен нет необходимости 
+в configureStore
+*/
+
+// import { configureStore } from './store/configureStore';
+
 
 // import CounterContainer from './pages/Counter/Containers/CounterContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// const store = configureStore(); 
 
 root.render(
     <BrowserRouter>
-        <MainLayout>
-            <Router />
-        </MainLayout>
+        <Provider store={store}>
+            <MainLayout>
+                <Router exact path="/" component={Registration}/>
+            </MainLayout>
+        </Provider>
     </BrowserRouter>
 );
+
+// BrowserRouter - обертка для всех страниц приложения
+// Provider - 
+// MainLayout - что бы header был всегда на виду на всех открываемых страницах
+// Router - получает все адреса страниц которые есть

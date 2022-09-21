@@ -9,7 +9,7 @@ export const mockUsers = [
     {
         id: uuid(),
         name: 'Balu',
-        age: 18,
+        age: 20,
     },
     {
         id: uuid(),

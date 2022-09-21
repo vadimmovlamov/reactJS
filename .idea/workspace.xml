@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5b01ec4-d83e-45ee-8905-89da373ba026" name="Changes" comment="add pages">
+      <change afterPath="$PROJECT_DIR$/app/src/components/SignUp/Styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/SignUp/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/constants/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/pages/FormLogin/containers/FormLoginContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/api/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/api/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/Login/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Login/reducer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/router/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/router/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/router/routeNames.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/router/routeNames.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/src/pages/PokemonsDetails/reducers/index.js" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectId" id="2EZSAeCSHAH1QcrgvKfwXxU4cfr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vadik/GitHub/furniture_store&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Vadik\\GitHub\\reactJS\\app\\node_modules\\prettier&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5b01ec4-d83e-45ee-8905-89da373ba026" name="Changes" comment="" />
+      <created>1662801473644</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662801473644</updated>
+      <workItem from="1662801476360" duration="228000" />
+      <workItem from="1662801714580" duration="25000" />
+      <workItem from="1662801747757" duration="308000" />
+      <workItem from="1662802068119" duration="108000" />
+      <workItem from="1662802184757" duration="1187000" />
+      <workItem from="1662918603290" duration="8019000" />
+      <workItem from="1663184043053" duration="1981000" />
+      <workItem from="1663484057316" duration="9815000" />
+      <workItem from="1663496568858" duration="302000" />
+      <workItem from="1663496881004" duration="249000" />
+      <workItem from="1663497138344" duration="48000" />
+      <workItem from="1663497194733" duration="14017000" />
+      <workItem from="1663520440497" duration="2201000" />
+      <workItem from="1663531155296" duration="6955000" />
+      <workItem from="1663783958672" duration="1192000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pages" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

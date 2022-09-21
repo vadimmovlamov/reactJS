@@ -1,0 +1,1 @@
+export const countersSelectors = (state) => state.countersManager.counters;
