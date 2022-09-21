@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { signIn as signInRequest } from "../api/config";
+import { LOCAL_STORAGE_KEYS } from "../../../constants";
 
 const initialState = {
   isLoading: false,
@@ -27,7 +28,7 @@ const authSlice = createSlice({
       state.userInfo = userInfo;
       state.accessToken = accessToken;
 
-      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem(LOCAL_STORAGE_KEYS.ACCES_TOKEN, accessToken);
       // сохраняем токен в localStorage, чтобы после перезагрузки страницы или
       // закрытия страницы токен не пропал
     },

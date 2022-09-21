@@ -15,6 +15,7 @@ export const ROUTE_NAMES = {
     DETAILS_POKE: '/data-fetch-redux-toolkit/:id', // это у адриана POKEMON_DETAILS
     SIGN_UP: '/sign-up',
     SIGN_IN: '/sign-in',
+    FORM_LOGIN: '/form-login',
 }
 
 

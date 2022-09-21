@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {BrowserRouter} from 'react-router-dom';
 
 import Router from "./router/Routes";
 
 import MainLayout from './components/Layouts';
 import './index.css';
-import { store } from './store/configureStore';
+import {store} from './store/configureStore';
+import Registration from "./components/SignUp";
+import "../src/components/SignUp/Styles";
 
 /* 
 после появляения в коде redux toolkit ужен нет необходимости 
@@ -26,7 +28,7 @@ root.render(
     <BrowserRouter>
         <Provider store={store}>
             <MainLayout>
-                <Router />
+                <Router exact path="/" component={Registration}/>
             </MainLayout>
         </Provider>
     </BrowserRouter>

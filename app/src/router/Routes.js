@@ -19,8 +19,9 @@ import DataFetchingContainerToolkit from "../pages/DataFetchingReduxToolkit/cont
 import PokemonDetailsContainer from "../pages/PokemonsDetails/containers/PokemonsDetailsContainer";
 import SignUpContainer from "../pages/SignUp/containers/SignUpContainer";
 import SignInContainer from "../pages/Login/containers/SignInContainer";
+import FormLoginContainer from "../pages/FormLogin/containers/FormLoginContainer";
 
-const Router = () => {
+constRouter = () => {
     return (
         <Routes>
             <Route path={ROUTE_NAMES.HOME} element={<Home/>}/>
@@ -39,6 +40,7 @@ const Router = () => {
             <Route path={ROUTE_NAMES.DETAILS_POKE} element={<PokemonDetailsContainer/>}/>
             <Route path={ROUTE_NAMES.SIGN_UP} element={<SignUpContainer/>}/>
             <Route path={ROUTE_NAMES.SIGN_IN} element={<SignInContainer/>}/>
+            <Route path={ROUTE_NAMES.FORM_LOGIN} element={<FormLoginContainer/>}/>
         </Routes>
     )
 }
